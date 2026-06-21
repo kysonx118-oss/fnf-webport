@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "Rose dead",
+    "assetPath": "characters/shucks/rose-dead/rose-shucks-dead",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1.3,
+    "healthIcon": {
+        "id": "rose-shucks",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                1,
+                24
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

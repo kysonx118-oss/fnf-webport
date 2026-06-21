@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Jimmyp1",
+    "assetPath": "characters/irida/Jimmy/Jimmy_Plushie",
+    "singTime": 7.99999999999999,
+    "isPixel": false,
+    "scale": 1.8,
+    "healthIcon": {
+        "id": "Jplush",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                0,
+                40
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                265,
+                -200
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                -130,
+                -300
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                -60,
+                -310
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                -29,
+                -204
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

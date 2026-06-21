@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Pp2",
+    "assetPath": "characters/revenant/chefpp/pp2",
+    "singTime": 5.59999999999999,
+    "isPixel": false,
+    "scale": 0.8,
+    "healthIcon": {
+        "id": "pp",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "chefidle",
+            "offsets": [
+                176,
+                -57
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "chefup",
+            "offsets": [
+                119,
+                -5
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "chefdown",
+            "offsets": [
+                204,
+                -32
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "chefright",
+            "offsets": [
+                190,
+                -51
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "chefleft",
+            "offsets": [
+                45,
+                -71
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

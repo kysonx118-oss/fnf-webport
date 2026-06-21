@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Jimmy",
+    "assetPath": "characters/irida/Jimmy/Dark Jimmy",
+    "singTime": 4.00000000000003,
+    "isPixel": false,
+    "scale": 0.9,
+    "healthIcon": {
+        "id": "jimmy real",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Idol",
+            "offsets": [
+                1039,
+                371
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                1061,
+                364
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                982,
+                403
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                906,
+                388
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                1022,
+                334
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

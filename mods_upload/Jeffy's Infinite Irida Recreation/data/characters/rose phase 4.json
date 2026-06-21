@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "Rose phase 4",
+    "assetPath": "characters/execretion/Rose/Rose_Spin",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1,
+    "healthIcon": {
+        "id": "dark-rose",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Rose_Stylized",
+            "offsets": [
+                0,
+                0
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "Voidp1",
+    "assetPath": "characters/void/Void",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.1,
+    "healthIcon": {
+        "id": "poop2",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                214,
+                116
+            ],
+            "frameRate": 1,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

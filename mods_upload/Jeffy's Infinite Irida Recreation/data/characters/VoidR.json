@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "Voidr",
+    "assetPath": "characters/void/Void",
+    "singTime": 6.1,
+    "isPixel": false,
+    "scale": 0.6,
+    "healthIcon": {
+        "id": "rose",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                182,
+                8
+            ],
+            "frameRate": 1,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

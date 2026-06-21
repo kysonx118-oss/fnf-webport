@@ -1,0 +1,51 @@
+{
+  "version": "2.2.0",
+  "songName": "Shucks V3",
+  "artist": "Unknown Artist",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {}
+  },
+  "playData": {
+    "album": "volume1",
+    "previewStart": 0,
+    "previewEnd": 15000,
+    "songVariations": [],
+    "difficulties": [
+      "hard"
+    ],
+    "characters": {
+      "album": "volume1",
+      "player": "marvin dark",
+      "girlfriend": "rose irida",
+      "opponent": "detg shadow",
+      "instrumental": "",
+      "altInstrumentals": []
+    },
+    "stage": "shucks",
+    "noteStyle": "funkin",
+    "ratings": {}
+  },
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 195,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "generatedBy": "FNF Porter (by Gusborg, tposejank, BombasticTom & VocalFan)",
+  "ratings": {
+    "hard": 0
+  }
+}

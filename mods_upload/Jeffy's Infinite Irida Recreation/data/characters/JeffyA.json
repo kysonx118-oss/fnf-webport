@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Jeffya",
+    "assetPath": "characters/irida/Jimmy/Animated_Jeffy",
+    "singTime": 6.1,
+    "isPixel": false,
+    "scale": 0.7,
+    "healthIcon": {
+        "id": "Jcartoon",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                -795,
+                -18
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                -844,
+                -32
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                -21,
+                65
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                -624,
+                -32
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                -813,
+                -24
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

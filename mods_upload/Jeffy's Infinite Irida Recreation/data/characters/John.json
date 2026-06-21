@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "John",
+    "assetPath": "characters/corpse/john/john",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1.2,
+    "healthIcon": {
+        "id": "john",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "Evil_John_Left",
+            "offsets": [
+                140,
+                -55
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Evil_John_Right",
+            "offsets": [
+                129,
+                -54
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Evil_John_Down",
+            "offsets": [
+                119,
+                -74
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Evil_John_Up",
+            "offsets": [
+                133,
+                -85
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Evil_John_Idle",
+            "offsets": [
+                133,
+                -72
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

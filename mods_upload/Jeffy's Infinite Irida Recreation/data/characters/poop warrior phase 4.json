@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Poop warrior phase 4",
+    "assetPath": "characters/execretion/Poop Warrior/Poop_Atonal",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1,
+    "healthIcon": {
+        "id": "dark-poop",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "Poop_warrior_left",
+            "offsets": [
+                436,
+                88
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Poop_warrior_down",
+            "offsets": [
+                304,
+                -167
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Poop_warrior_up",
+            "offsets": [
+                376,
+                142
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Poop_warrior_right",
+            "offsets": [
+                13,
+                121
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Poop_warrior0",
+            "offsets": [
+                0,
+                0
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

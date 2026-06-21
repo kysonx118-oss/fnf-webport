@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "Detg legs",
+    "assetPath": "characters/shucks/detg-run/detg-legs",
+    "singTime": 7.69999999999999,
+    "isPixel": false,
+    "scale": 1.7,
+    "healthIcon": {
+        "id": "detg",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "detg",
+            "offsets": [
+                1127,
+                -547
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

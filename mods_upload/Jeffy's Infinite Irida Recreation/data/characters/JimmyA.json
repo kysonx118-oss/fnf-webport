@@ -1,0 +1,138 @@
+{
+    "version": "1.0.0",
+    "name": "Jimmya",
+    "assetPath": "characters/irida/Jimmy/Jeffy_Evil",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.7,
+    "healthIcon": {
+        "id": "Jcartoon",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "left",
+            "offsets": [
+                -592,
+                -96
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                -609,
+                -160
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                -876,
+                50
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "right",
+            "offsets": [
+                -759,
+                -53
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                -811,
+                -58
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "transition",
+            "prefix": "transition",
+            "offsets": [
+                -830,
+                -57
+            ],
+            "frameRate": 24,
+            "frameIndices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30
+            ]
+        }
+    ],
+    "flipX": false
+}

@@ -1,0 +1,77 @@
+{
+    "version": "1.0.0",
+    "name": "Cody Rapper",
+    "assetPath": "characters/revenant/cody/cody-rapper",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.8,
+    "healthIcon": {
+        "id": "cody",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                -22,
+                -290
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                -5,
+                -320
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                -10,
+                -316
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                -14,
+                -271
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                -29,
+                -299
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "transition",
+            "prefix": "transition",
+            "offsets": [
+                192,
+                -71
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Detg shadow",
+    "assetPath": "characters/shucks/detg-shadow/detg-shadow",
+    "singTime": 6.10000000000003,
+    "isPixel": false,
+    "scale": 1.7,
+    "healthIcon": {
+        "id": "detg-shadow",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                -18,
+                -56
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "d",
+            "offsets": [
+                64,
+                -91
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "u",
+            "offsets": [
+                -11,
+                73
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r",
+            "offsets": [
+                -19,
+                -19
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "l",
+            "offsets": [
+                -18,
+                -56
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "scrollSpeed": {
+    "hard": 1
+  },
+  "events": [
+    {
+      "t": 0,
+      "e": "FocusCamera",
+      "v": {
+        "char": "0"
+      }
+    }
+  ],
+  "notes": {
+    "hard": []
+  },
+  "generatedBy": "FNF Porter (by Gusborg, tposejank, BombasticTom & VocalFan)"
+}

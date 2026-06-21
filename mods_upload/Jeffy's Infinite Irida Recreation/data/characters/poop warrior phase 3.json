@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Poop warrior phase 3",
+    "assetPath": "characters/execretion/Poop Warrior/POOP_STYLIZED",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1.1,
+    "healthIcon": {
+        "id": "poop2",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Poop_Idle",
+            "offsets": [
+                60,
+                50
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Poop_Left",
+            "offsets": [
+                -47,
+                -15
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Poop_Down",
+            "offsets": [
+                -69,
+                -58
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Poop_Up",
+            "offsets": [
+                -84,
+                102
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Poop_Right",
+            "offsets": [
+                -88,
+                18
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

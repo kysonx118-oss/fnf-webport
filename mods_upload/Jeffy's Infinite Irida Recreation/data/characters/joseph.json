@@ -1,0 +1,117 @@
+{
+    "version": "1.0.0",
+    "name": "Joseph",
+    "assetPath": "characters/revenant/joseph/joseph",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.7,
+    "healthIcon": {
+        "id": "joe",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "left",
+            "offsets": [
+                18,
+                -1
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                -37,
+                34
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                -30,
+                -33
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "right",
+            "offsets": [
+                -24,
+                -11
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHTmiss",
+            "prefix": "missright",
+            "offsets": [
+                -30,
+                -11
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFTmiss",
+            "prefix": "missleft",
+            "offsets": [
+                17,
+                -7
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUPmiss",
+            "prefix": "missup",
+            "offsets": [
+                -45,
+                33
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWNmiss",
+            "prefix": "missdown",
+            "offsets": [
+                -23,
+                -26
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "bye",
+            "prefix": "DUDE_IM_OUTTA_HERE",
+            "offsets": [
+                40,
+                40
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                -25,
+                -15
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

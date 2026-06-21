@@ -1,0 +1,41 @@
+{
+    "version": "1.0.0",
+    "name": "Pp Transform",
+    "assetPath": "characters/revenant/chefpp/transformation",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.7,
+    "healthIcon": {
+        "id": "pp",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "transform",
+            "offsets": [
+                537,
+                282
+            ],
+            "frameRate": 24,
+            "frameIndices": [
+                78,
+                79,
+                80
+            ]
+        },
+        {
+            "name": "transform",
+            "prefix": "transform",
+            "offsets": [
+                537,
+                282
+            ],
+            "frameRate": 26,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

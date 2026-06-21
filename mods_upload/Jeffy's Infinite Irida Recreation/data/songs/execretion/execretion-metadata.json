@@ -1,0 +1,129 @@
+{
+  "version": "2.2.0",
+  "songName": "Execretion",
+  "artist": "Unknown Artist",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {}
+  },
+  "playData": {
+    "album": "volume1",
+    "previewStart": 0,
+    "previewEnd": 15000,
+    "songVariations": [],
+    "difficulties": [
+      "hard"
+    ],
+    "characters": {
+      "album": "volume1",
+      "player": "rose phase 1",
+      "girlfriend": "Void",
+      "opponent": "poop warrior phase 1",
+      "instrumental": "",
+      "altInstrumentals": []
+    },
+    "stage": "execretion",
+    "noteStyle": "funkin",
+    "ratings": {}
+  },
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 190,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 190736.84210526315,
+      "b": 0,
+      "bpm": 200,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 211136.84210526315,
+      "b": 0,
+      "bpm": 195,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 230829.14979757083,
+      "b": 0,
+      "bpm": 190,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 273144.93927125505,
+      "b": 0,
+      "bpm": 170,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 315497.88044772565,
+      "b": 0,
+      "bpm": 175,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 340183.5947334399,
+      "b": 0,
+      "bpm": 166,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "generatedBy": "FNF Porter (by Gusborg, tposejank, BombasticTom & VocalFan)",
+  "ratings": {
+    "hard": 0
+  }
+}

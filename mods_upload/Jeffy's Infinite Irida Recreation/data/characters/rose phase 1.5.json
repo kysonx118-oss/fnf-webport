@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Rose phase 1.5",
+    "assetPath": "characters/execretion/Rose/stressed-rose",
+    "singTime": 6.1,
+    "isPixel": false,
+    "scale": 2.6,
+    "healthIcon": {
+        "id": "rose",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "r idle",
+            "offsets": [
+                545,
+                -175
+            ],
+            "frameRate": 16,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r right",
+            "offsets": [
+                548,
+                -173
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "r left",
+            "offsets": [
+                545,
+                -175
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "r up",
+            "offsets": [
+                546,
+                -175
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "r down",
+            "offsets": [
+                548,
+                -176
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

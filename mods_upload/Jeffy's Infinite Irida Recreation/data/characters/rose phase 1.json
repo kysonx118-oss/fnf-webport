@@ -1,0 +1,127 @@
+{
+    "version": "1.0.0",
+    "name": "Rose phase 1",
+    "assetPath": "characters/execretion/Rose/rose",
+    "singTime": 7.69999999999998,
+    "isPixel": false,
+    "scale": 2,
+    "healthIcon": {
+        "id": "rose",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Rose Execretion",
+            "offsets": [
+                -70,
+                -170
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWNmiss",
+            "prefix": "Rose Down Miss",
+            "offsets": [
+                30,
+                -200
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUPmiss",
+            "prefix": "Rose Up Miss",
+            "offsets": [
+                -40,
+                -125
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHTmiss",
+            "prefix": "Rose Right Miss",
+            "offsets": [
+                125,
+                -30
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFTmiss",
+            "prefix": "Rose Left Miss",
+            "offsets": [
+                160,
+                -50
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "ew",
+            "prefix": "Ew",
+            "offsets": [
+                -30,
+                -225
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "scream",
+            "prefix": "rose screm",
+            "offsets": [
+                5,
+                70
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Rose Down0",
+            "offsets": [
+                35,
+                -190
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Rose Right0",
+            "offsets": [
+                -30,
+                -190
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Rose Left0",
+            "offsets": [
+                105,
+                -190
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Rose Up0",
+            "offsets": [
+                -45,
+                -175
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

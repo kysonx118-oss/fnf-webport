@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Detg chair",
+    "assetPath": "characters/shucks/detg-chair/",
+    "singTime": 7.69999999999999,
+    "isPixel": false,
+    "scale": 4.2,
+    "healthIcon": {
+        "id": "detg",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "l",
+            "offsets": [
+                582,
+                379
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "d",
+            "offsets": [
+                583,
+                379
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "u",
+            "offsets": [
+                583,
+                379
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r",
+            "offsets": [
+                583,
+                379
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                583,
+                379
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

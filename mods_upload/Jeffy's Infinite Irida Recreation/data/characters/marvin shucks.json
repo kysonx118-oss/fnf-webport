@@ -1,0 +1,137 @@
+{
+    "version": "1.0.0",
+    "name": "Marvin shucks",
+    "assetPath": "characters/shucks/marvin-shucks",
+    "singTime": 7.8,
+    "isPixel": false,
+    "scale": 2.4,
+    "healthIcon": {
+        "id": "marvin-shucks",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                135,
+                -85
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "d",
+            "offsets": [
+                135,
+                -420
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "u",
+            "offsets": [
+                610,
+                -60
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "l",
+            "offsets": [
+                120,
+                -90
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r",
+            "offsets": [
+                140,
+                -80
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "voiceline",
+            "prefix": "voiceline",
+            "offsets": [
+                215,
+                -115
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "intro",
+            "prefix": "hellohottie",
+            "offsets": [
+                140,
+                -250
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle-alt",
+            "prefix": "alti",
+            "offsets": [
+                135,
+                -85
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN-alt",
+            "prefix": "altd",
+            "offsets": [
+                135,
+                -415
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP-alt",
+            "prefix": "altu",
+            "offsets": [
+                610,
+                -60
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT-alt",
+            "prefix": "altl",
+            "offsets": [
+                120,
+                -90
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT-alt",
+            "prefix": "altr",
+            "offsets": [
+                140,
+                -80
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

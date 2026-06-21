@@ -1,0 +1,107 @@
+{
+    "version": "1.0.0",
+    "name": "Marvin run",
+    "assetPath": "characters/shucks/marvin-shucks-run",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 5.2,
+    "healthIcon": {
+        "id": "marvin-shucks-bloody",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "l",
+            "offsets": [
+                90,
+                95
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "d",
+            "offsets": [
+                -370,
+                -80
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r",
+            "offsets": [
+                -480,
+                60
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "u",
+            "offsets": [
+                -580,
+                375
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFTmiss",
+            "prefix": "ml",
+            "offsets": [
+                110,
+                410
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWNmiss",
+            "prefix": "md",
+            "offsets": [
+                -180,
+                360
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHTmiss",
+            "prefix": "mr",
+            "offsets": [
+                -185,
+                260
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUPmiss",
+            "prefix": "mu",
+            "offsets": [
+                -195,
+                400
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                -20,
+                80
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

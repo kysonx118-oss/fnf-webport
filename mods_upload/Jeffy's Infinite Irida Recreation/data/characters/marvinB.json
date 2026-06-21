@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Marvinb",
+    "assetPath": "characters/irida/Marvin/Bluemarv",
+    "singTime": 4.00000000000003,
+    "isPixel": false,
+    "scale": 1,
+    "healthIcon": {
+        "id": "bluevin",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                -793,
+                -45
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "left",
+            "offsets": [
+                -679,
+                -182
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "right",
+            "offsets": [
+                -801,
+                -157
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                -816,
+                -186
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                -805,
+                -113
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

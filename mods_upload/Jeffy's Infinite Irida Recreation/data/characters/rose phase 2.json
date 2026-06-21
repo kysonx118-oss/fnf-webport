@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Rose phase 2",
+    "assetPath": "characters/execretion/Rose/roseunderwater",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 2.8,
+    "healthIcon": {
+        "id": "rose",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "left",
+            "offsets": [
+                726,
+                40
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                579,
+                -3
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                579,
+                161
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "right",
+            "offsets": [
+                513,
+                12
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                533,
+                -14
+            ],
+            "frameRate": 18,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Marvina",
+    "assetPath": "characters/irida/Marvin/Animated_Marvin",
+    "singTime": 6.1,
+    "isPixel": false,
+    "scale": 0.6,
+    "healthIcon": {
+        "id": "Mcartoon",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                897,
+                62
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                1013,
+                105
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                908,
+                63
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                974,
+                72
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                954,
+                50
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

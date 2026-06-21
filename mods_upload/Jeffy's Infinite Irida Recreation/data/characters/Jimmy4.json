@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Jimmy4",
+    "assetPath": "characters/irida/Jimmy/Purple_Jimmy",
+    "singTime": 6.1,
+    "isPixel": false,
+    "scale": 1.1,
+    "healthIcon": {
+        "id": "bluejim",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                432,
+                254
+            ],
+            "frameRate": 10,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                422,
+                233
+            ],
+            "frameRate": 12,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                365,
+                262
+            ],
+            "frameRate": 10,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                204,
+                263
+            ],
+            "frameRate": 10,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Idol",
+            "offsets": [
+                431,
+                261
+            ],
+            "frameRate": 13,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

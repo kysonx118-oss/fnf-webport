@@ -1,0 +1,107 @@
+{
+    "version": "1.0.0",
+    "name": "Marvinp1",
+    "assetPath": "characters/irida/Marvin/Marvin_Plushie",
+    "singTime": 7,
+    "isPixel": false,
+    "scale": 1.6,
+    "healthIcon": {
+        "id": "Mplush",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                -110,
+                -370
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                -140,
+                -240
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                0,
+                -350
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWNmiss",
+            "prefix": "Miss Down",
+            "offsets": [
+                -65,
+                -405
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUPmiss",
+            "prefix": "Miss Up",
+            "offsets": [
+                -130,
+                -275
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFTmiss",
+            "prefix": "Miss Left",
+            "offsets": [
+                -40,
+                -360
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                -160,
+                -350
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHTmiss",
+            "prefix": "Miss Right",
+            "offsets": [
+                -180,
+                -360
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                -135,
+                -300
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

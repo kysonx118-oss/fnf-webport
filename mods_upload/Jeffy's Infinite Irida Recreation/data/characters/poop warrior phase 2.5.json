@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Poop warrior phase 2.5",
+    "assetPath": "characters/execretion/Poop Warrior/PoopWater",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 3.6,
+    "healthIcon": {
+        "id": "poop2",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                322,
+                688
+            ],
+            "frameRate": 6,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                342,
+                690
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                352,
+                688
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "right",
+            "offsets": [
+                419,
+                690
+            ],
+            "frameRate": 6,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "left",
+            "offsets": [
+                413,
+                687
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

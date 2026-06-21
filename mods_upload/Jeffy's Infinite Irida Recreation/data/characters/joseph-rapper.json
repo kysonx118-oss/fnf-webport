@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Joseph Rapper",
+    "assetPath": "characters/revenant/joseph/joseph-rapper",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.7,
+    "healthIcon": {
+        "id": "joe",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "LeftRap",
+            "offsets": [
+                15,
+                49
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "UpRap",
+            "offsets": [
+                -14,
+                120
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "DownRap",
+            "offsets": [
+                2,
+                39
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "RightRap",
+            "offsets": [
+                -16,
+                31
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "IdleRap",
+            "offsets": [
+                -47,
+                59
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

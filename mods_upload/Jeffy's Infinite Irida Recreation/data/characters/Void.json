@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "name": "Void",
+    "assetPath": "characters/void/Void",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.8,
+    "healthIcon": {
+        "id": "face",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                214,
+                116
+            ],
+            "frameRate": 29,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

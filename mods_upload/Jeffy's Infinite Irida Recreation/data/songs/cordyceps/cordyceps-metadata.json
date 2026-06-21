@@ -1,0 +1,64 @@
+{
+  "version": "2.2.0",
+  "songName": "Cordyceps",
+  "artist": "Unknown Artist",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {}
+  },
+  "playData": {
+    "album": "volume1",
+    "previewStart": 0,
+    "previewEnd": 15000,
+    "songVariations": [],
+    "difficulties": [
+      "hard"
+    ],
+    "characters": {
+      "album": "volume1",
+      "player": "MarvinC",
+      "girlfriend": "Void",
+      "opponent": "Flowerboy",
+      "instrumental": "",
+      "altInstrumentals": []
+    },
+    "stage": "cordyceps",
+    "noteStyle": "funkin",
+    "ratings": {}
+  },
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 190,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 228631.57894736843,
+      "b": 0,
+      "bpm": 127,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "generatedBy": "FNF Porter (by Gusborg, tposejank, BombasticTom & VocalFan)",
+  "ratings": {
+    "hard": 0
+  }
+}

@@ -1,0 +1,77 @@
+{
+    "version": "1.0.0",
+    "name": "Marvin dark",
+    "assetPath": "characters/shucks/marvin-shadow/marvin-shucks-shadow",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1.8,
+    "healthIcon": {
+        "id": "marvin-shucks-shadow",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                0,
+                0
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "l",
+            "offsets": [
+                87,
+                43
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "d",
+            "offsets": [
+                2,
+                -19
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "u",
+            "offsets": [
+                -2,
+                73
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r",
+            "offsets": [
+                -37,
+                29
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "intro",
+            "prefix": "n",
+            "offsets": [
+                90,
+                70
+            ],
+            "frameRate": 20,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

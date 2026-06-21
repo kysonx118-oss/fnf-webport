@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "name": "Marvinp",
+    "assetPath": "characters/irida/Marvin/Marvin",
+    "singTime": 4.00000000000003,
+    "isPixel": false,
+    "scale": 0.8,
+    "healthIcon": {
+        "id": "marvin",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                -793,
+                -55
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "left",
+            "offsets": [
+                -699,
+                -172
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "right",
+            "offsets": [
+                -801,
+                -147
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                -816,
+                -166
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                -805,
+                -113
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": true
+}

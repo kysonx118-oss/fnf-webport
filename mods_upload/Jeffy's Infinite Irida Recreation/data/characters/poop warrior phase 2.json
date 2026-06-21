@@ -1,0 +1,77 @@
+{
+    "version": "1.0.0",
+    "name": "Poop warrior phase 2",
+    "assetPath": "characters/execretion/Poop Warrior/poopwarrior",
+    "singTime": 9.49999999999998,
+    "isPixel": false,
+    "scale": 2.2,
+    "healthIcon": {
+        "id": "poop2",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Idle",
+            "offsets": [
+                0,
+                -40
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Left",
+            "offsets": [
+                469,
+                -2
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Down",
+            "offsets": [
+                36,
+                -32
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "Up",
+            "offsets": [
+                245,
+                127
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "Right",
+            "offsets": [
+                22,
+                -15
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN-alt",
+            "prefix": "p down",
+            "offsets": [
+                500,
+                455
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

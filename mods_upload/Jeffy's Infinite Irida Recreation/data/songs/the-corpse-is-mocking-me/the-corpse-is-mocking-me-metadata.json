@@ -1,0 +1,116 @@
+{
+  "version": "2.2.0",
+  "songName": "The Corpse Is Mocking Me",
+  "artist": "Unknown Artist",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {}
+  },
+  "playData": {
+    "album": "volume1",
+    "previewStart": 0,
+    "previewEnd": 15000,
+    "songVariations": [],
+    "difficulties": [
+      "hard"
+    ],
+    "characters": {
+      "album": "volume1",
+      "player": "dennis",
+      "girlfriend": "Void",
+      "opponent": "John",
+      "instrumental": "",
+      "altInstrumentals": []
+    },
+    "stage": "corpse",
+    "noteStyle": "funkin",
+    "ratings": {}
+  },
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 33600.0,
+      "b": 0,
+      "bpm": 180,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 56266.666666666664,
+      "b": 0,
+      "bpm": 208,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 75882.05128205128,
+      "b": 0,
+      "bpm": 160,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 92382.05128205128,
+      "b": 0,
+      "bpm": 180,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "t": 103048.71794871795,
+      "b": 0,
+      "bpm": 195,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "generatedBy": "FNF Porter (by Gusborg, tposejank, BombasticTom & VocalFan)",
+  "ratings": {
+    "hard": 0
+  }
+}

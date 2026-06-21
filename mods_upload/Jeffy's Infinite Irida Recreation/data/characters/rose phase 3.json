@@ -1,0 +1,79 @@
+{
+    "version": "1.0.0",
+    "name": "Rose phase 3",
+    "assetPath": "characters/execretion/Rose/ROSE_SCARED",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 1.4,
+    "healthIcon": {
+        "id": "rose",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singRIGHT",
+            "prefix": "ROSE_POOPED RIGHT",
+            "offsets": [
+                119,
+                -217
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "ROSE_POOPED_DOWN",
+            "offsets": [
+                217,
+                -368
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "ROSE_POOPED_UP",
+            "offsets": [
+                119,
+                -162
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "ROSE_POOPED_LEFT",
+            "offsets": [
+                192,
+                -268
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "ROSE_POOPED",
+            "offsets": [
+                200,
+                -200
+            ],
+            "frameRate": 24,
+            "frameIndices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    ],
+    "flipX": true
+}

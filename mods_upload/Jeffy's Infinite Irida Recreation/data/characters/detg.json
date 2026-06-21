@@ -1,0 +1,157 @@
+{
+    "version": "1.0.0",
+    "name": "Detg",
+    "assetPath": "characters/shucks/detg",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 2.4,
+    "healthIcon": {
+        "id": "detg",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "singLEFT",
+            "prefix": "l",
+            "offsets": [
+                918,
+                -14
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "d",
+            "offsets": [
+                377,
+                -856
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "u",
+            "offsets": [
+                1479,
+                -63
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "r",
+            "offsets": [
+                1041,
+                -48
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "lookover",
+            "prefix": "over",
+            "offsets": [
+                30,
+                30
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "voiceline",
+            "prefix": "voiceline",
+            "offsets": [
+                245,
+                235
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "lookback",
+            "prefix": "back",
+            "offsets": [
+                24,
+                39
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT-alt",
+            "prefix": "altl",
+            "offsets": [
+                918,
+                -14
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT-alt",
+            "prefix": "altr",
+            "offsets": [
+                1041,
+                -48
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP-alt",
+            "prefix": "altu",
+            "offsets": [
+                1479,
+                -63
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN-alt",
+            "prefix": "altd",
+            "offsets": [
+                377,
+                -856
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "idle-alt",
+            "prefix": "alti",
+            "offsets": [
+                22,
+                28
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "intro",
+            "prefix": "hellohottie",
+            "offsets": [
+                395,
+                1505
+            ],
+            "frameRate": 30,
+            "frameIndices": []
+        },
+        {
+            "name": "idle",
+            "prefix": "i",
+            "offsets": [
+                32,
+                28
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}

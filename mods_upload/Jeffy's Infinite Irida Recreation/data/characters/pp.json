@@ -1,0 +1,87 @@
+{
+    "version": "1.0.0",
+    "name": "Pp",
+    "assetPath": "characters/revenant/chefpp/pp",
+    "singTime": 4,
+    "isPixel": false,
+    "scale": 0.7,
+    "healthIcon": {
+        "id": "pp",
+        "isPixel": false,
+        "flipX": false,
+        "scale": 1
+    },
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "idle",
+            "offsets": [
+                -10,
+                -85
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "left",
+            "offsets": [
+                210,
+                -245
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "down",
+            "offsets": [
+                20,
+                -135
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singUP",
+            "prefix": "up",
+            "offsets": [
+                5,
+                10
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "right",
+            "offsets": [
+                -3,
+                -135
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "fuck",
+            "prefix": "fucknobaby",
+            "offsets": [
+                -10,
+                -30
+            ],
+            "frameRate": 24,
+            "frameIndices": []
+        },
+        {
+            "name": "yell",
+            "prefix": "scream",
+            "offsets": [
+                320,
+                85
+            ],
+            "frameRate": 18,
+            "frameIndices": []
+        }
+    ],
+    "flipX": false
+}
