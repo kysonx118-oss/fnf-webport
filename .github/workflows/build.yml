@@ -122,14 +122,11 @@ jobs:
           }
           EOF
 
-          # Remap native structures safely away from the sys layout restriction without breaking UI parsing
-          echo "--remap sys.thread.FixedThreadPool:Dynamic" > extraParams.hxml
-          echo "--remap sys.thread.Thread:Dynamic" >> extraParams.hxml
-          echo "--remap sys.thread.Mutex:Dynamic" >> extraParams.hxml
-          echo "-D no_threads" >> extraParams.hxml
-          
-          # Inject configurations to Project.xml safely
-          sed -i '/<\/project>/i \ <haxeflag name="-hxml" value="extraParams.hxml" \/>' Project.xml
+          # Inject standard remapping properties safely directly inside Project.xml instead of using an external HXML flag block
+          sed -i '/<\/project>/i \ <haxedef name="sys.thread.FixedThreadPool" value="Dynamic" \/>' Project.xml
+          sed -i '/<\/project>/i \ <haxedef name="sys.thread.Thread" value="Dynamic" \/>' Project.xml
+          sed -i '/<\/project>/i \ <haxedef name="sys.thread.Mutex" value="Dynamic" \/>' Project.xml
+          sed -i '/<\/project>/i \ <haxedef name="no_threads" \/>' Project.xml
 
           find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
 
