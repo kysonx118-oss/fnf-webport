@@ -122,16 +122,41 @@ jobs:
           }
           EOF
 
-          # Instead of string-replacing code, we instruct Haxe directly to map missing types to Dynamic
+          # Remap native structures safely away from the sys layout restriction without breaking UI parsing
           echo "--remap sys.thread.FixedThreadPool:Dynamic" > extraParams.hxml
           echo "--remap sys.thread.Thread:Dynamic" >> extraParams.hxml
           echo "--remap sys.thread.Mutex:Dynamic" >> extraParams.hxml
           echo "-D no_threads" >> extraParams.hxml
           
-          # Append our clean hxml flags into Project.xml safely
+          # Inject configurations to Project.xml safely
           sed -i '/<\/project>/i \ <haxeflag name="-hxml" value="extraParams.hxml" \/>' Project.xml
 
           find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
+
+      - name: Optimization & Web Compile Build
+        run: |
+          cd engine-source
+          set -e
+          haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL -D no_threads -D hscriptPos
+
+      - name: Package Flat ZIP & Standardize output
+        run: |
+          cd engine-source/export/release/html5/bin
+          
+          # Rename main engine code script file to funkin.js for embedding
+          MAIN_JS=$(ls *.js | grep -E -v 'howler|pako' | head -n 1)
+          if [ -n "$MAIN_JS" ] && [ "$MAIN_JS" != "funkin.js" ]; then
+            mv "$MAIN_JS" funkin.js
+            if [ -f "index.html" ]; then
+              sed -i "s/$MAIN_JS/funkin.js/g" index.html
+            fi
+          fi
+          
+          if [ ! -f "index.html" ]; then
+            echo "<!DOCTYPE html><html><body style='margin:0; padding:0; background:#000;'><script src='funkin.js'></script></body></html>" > index.html
+          fi
+          
+          zip -r "$GITHUB_WORKSPACE/web_export.zip" *
 
       - name: Upload Web Export
         uses: actions/upload-artifact@v4
@@ -141,8 +166,7 @@ jobs:
 
       - name: Auto-Publish to GitHub Branch
         run: |
-          BIN_PATH=$(find engine-source/export -type d -name "bin" | grep "html5" | head -n 1)
-          cd "$BIN_PATH"
+          cd engine-source/export/release/html5/bin
           git init
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
