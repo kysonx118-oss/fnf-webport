@@ -112,4 +112,5 @@ jobs:
         run: |
           cd engine-source
           set -e
-          haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL -D target.html5 -D no_threads -D hscriptPos
+          # Removed the reserved target.html5 flag
+          haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL -D no_threads -D hscriptPos
