@@ -124,24 +124,20 @@ jobs:
           }
           EOF
           
-          # Inject global type stubs to catch the missing Desktop objects safely
-          echo "package;" > source/FixedThreadPool.hx
-          echo "typedef FixedThreadPool = Dynamic;" >> source/FixedThreadPool.hx
-          echo "package;" > source/Thread.hx
-          echo "typedef Thread = Dynamic;" >> source/Thread.hx
-
-          # Clean up source code files safely without breaking import structures
+          # Clean up source files targeting sys systems safely without destroying UI layout variables
           find source -name "*.hx" -type f -exec sed -i -e 's/sys\.FileSystem/FileSystem/g' \
                                                            -e 's/sys\.io\.File/File/g' \
                                                            -e 's/sys\.io\.Process/Process/g' \
-                                                           -e 's/sys\.thread\.FixedThreadPool/FixedThreadPool/g' \
-                                                           -e 's/sys\.thread\.Thread/Thread/g' \
-                                                           -e 's/sys\.thread\.Mutex/Dynamic/g' \
                                                            -e 's/import sys\.thread\./\/\/ /g' \
-                                                           -e '/import cpp/d' \
-                                                           -e 's/cpp\.[a-zA-Z0-9_]+/Dynamic/g' \
-                                                           -e '/import llua/d' \
-                                                           -e 's/llua\.[a-zA-Z0-9_]+/Dynamic/g' {} +
+                                                           -e 's/sys\.thread\.FixedThreadPool/Dynamic/g' \
+                                                           -e 's/sys\.thread\.Thread/Dynamic/g' \
+                                                           -e 's/sys\.thread\.Mutex/Dynamic/g' {} +
+                                                           
+          # Safely comment out remaining desktop specific blocks in LoadingState
+          if [ -f "source/states/LoadingState.hx" ]; then
+            sed -i 's/var thread:.*/var thread:Dynamic = null;/g' source/states/LoadingState.hx
+          fi
+
           find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
       
       - name: Optimization & Web Compile Build
