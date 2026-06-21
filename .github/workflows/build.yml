@@ -57,19 +57,6 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hmm --quiet
           
-          # Create a fallback hmm.json including hxdiscord_rpc
-          if [ ! -f hmm.json ]; then
-            echo '{"dependencies": [{"name": "lime", "type": "haxelib", "version": "8.1.2"},{"name": "openfl", "type": "haxelib", "version": "9.3.3"},{"name": "flixel", "type": "haxelib", "version": "5.6.1"},{"name": "flixel-addons", "type": "haxelib", "version": "3.2.2"},{"name": "flixel-ui", "type": "haxelib", "version": "2.6.1"},{"name": "hscript-iris", "type": "haxelib", "version": "1.1.0"},{"name": "tjson", "type": "haxelib", "version": "1.4.0"},{"name": "hxdiscord_rpc", "type": "haxelib", "version": "1.2.4"}]}' > hmm.json
-          fi
-          
-          haxelib run hmm install --quiet
-      
-      - name: Install Haxelibs and Dependencies
-        run: |
-          cd engine-source
-          haxelib setup ~/haxelib
-          haxelib install hmm --quiet
-          
           # Force overwrite the engine's hmm.json with our working web-port version
           cat << 'EOF' > hmm.json
           {
@@ -79,7 +66,7 @@ jobs:
               { "name": "flixel", "type": "haxelib", "version": "5.6.1" },
               { "name": "flixel-addons", "type": "haxelib", "version": "3.2.2" },
               { "name": "flixel-ui", "type": "haxelib", "version": "2.6.1" },
-              { "name": "hscript-iris", "type": "haxelib", "version": "1.1.0" },
+              { "name": "hscript-iris", "type": "haxelib", "version": "1.0.2" },
               { "name": "tjson", "type": "haxelib", "version": "1.4.0" },
               { "name": "hxdiscord_rpc", "type": "haxelib", "version": "1.2.4" },
               { "name": "flxanimate", "type": "haxelib", "version": "3.0.4" }
@@ -124,6 +111,5 @@ jobs:
       - name: Optimization & Web Compile Build
         run: |
           cd engine-source
-          # Run the build with clean commands and tell bash to stop immediately if it hits a Haxe compilation error
           set -e
-          haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL
+          haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL -D target.html5 -D no_threads -D hscriptPos
