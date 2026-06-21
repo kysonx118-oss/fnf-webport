@@ -92,7 +92,16 @@ jobs:
           haxelib run hmm install --quiet
       - name: Package Flat ZIP & Standardize output
         run: |
-          cd engine-source/export/release/html5/bin
+          # Dynamically locate the html5 bin folder wherever it was generated
+          BIN_PATH=$(find engine-source/export -type d -name "bin" | grep "html5" | head -n 1)
+          
+          if [ -z "$BIN_PATH" ]; then
+            echo "Error: Could not find the HTML5 export bin directory!"
+            exit 1
+          fi
+          
+          echo "Found build files at: $BIN_PATH"
+          cd "$BIN_PATH"
           
           # Rename main engine JS file to funkin.js for easier jsDelivr/CDN embedding
           MAIN_JS=$(ls *.js | grep -E -v 'howler|pako' | head -n 1)
@@ -109,5 +118,5 @@ jobs:
             echo "<!DOCTYPE html><html><body><h1>FNF Web Build</h1><script src='funkin.js'></script></body></html>" > index.html
           fi
           
-          # Zip the contents and make sure it outputs to the correct root path
-          zip -r ../../../../../web_export.zip *
+          # Zip the contents and output back to the root workspace directory
+          zip -r "$GITHUB_WORKSPACE/web_export.zip" *
