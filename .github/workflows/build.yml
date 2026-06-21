@@ -70,27 +70,29 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hmm --quiet
           
-          # Create a clean, multi-line hmm.json file
-          if [ ! -f hmm.json ]; then
-            cat << 'EOF' > hmm.json
-            {
-              "dependencies": [
-                { "name": "lime", "type": "haxelib", "version": "8.1.2" },
-                { "name": "openfl", "type": "haxelib", "version": "9.3.3" },
-                { "name": "flixel", "type": "haxelib", "version": "5.6.1" },
-                { "name": "flixel-addons", "type": "haxelib", "version": "3.2.2" },
-                { "name": "flixel-ui", "type": "haxelib", "version": "2.6.1" },
-                { "name": "hscript-iris", "type": "haxelib", "version": "1.1.0" },
-                { "name": "tjson", "type": "haxelib", "version": "1.4.0" },
-                { "name": "hxdiscord_rpc", "type": "haxelib", "version": "1.2.4" },
-                { "name": "flxanimate", "type": "haxelib", "version": "3.0.4" }
-              ]
-            }
+          # Force overwrite the engine's hmm.json with our working web-port version
+          cat << 'EOF' > hmm.json
+          {
+            "dependencies": [
+              { "name": "lime", "type": "haxelib", "version": "8.1.2" },
+              { "name": "openfl", "type": "haxelib", "version": "9.3.3" },
+              { "name": "flixel", "type": "haxelib", "version": "5.6.1" },
+              { "name": "flixel-addons", "type": "haxelib", "version": "3.2.2" },
+              { "name": "flixel-ui", "type": "haxelib", "version": "2.6.1" },
+              { "name": "hscript-iris", "type": "haxelib", "version": "1.1.0" },
+              { "name": "tjson", "type": "haxelib", "version": "1.4.0" },
+              { "name": "hxdiscord_rpc", "type": "haxelib", "version": "1.2.4" },
+              { "name": "flxanimate", "type": "haxelib", "version": "3.0.4" }
+            ]
+          }
           EOF
-          fi
           
+          # Run the installer
           haxelib run hmm install --quiet
-
+          
+          # Direct backup safety install for flxanimate just in case
+          haxelib install flxanimate 3.0.4 --quiet
+      
       - name: Patch HTML5 incompatible code (Mock Sys)
         run: |
           cd engine-source
