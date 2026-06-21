@@ -91,7 +91,20 @@ jobs:
           # Force remove all desktop-only native libraries from the configuration file
           sed -i -e '/discord_rpc/d' -e '/discord-rpc/d' -e '/linc_luajit/d' -e '/hxVideoEngine/d' -e '/extension-webkit/d' Project.xml || true
           
-          # Create a bulletproof fake hxdiscord_rpc stub module
+          # Completely neutralize the engine's Discord handler file for web compatibility
+          mkdir -p source/backend
+          cat << 'EOF' > source/backend/Discord.hx
+          package backend;
+          class DiscordClient {
+              public static function changePresence(details:String, state:Null<String>, ?smallImgKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float) {}
+              public static function initialize() {}
+              public static function check() {}
+              public static function shutdown() {}
+              public static function addLuaCallbacks(lua:Dynamic) {}
+          }
+          EOF
+
+          # Create a bulletproof fake hxdiscord_rpc stub module just in case other files use it
           mkdir -p source/hxdiscord_rpc
           cat << 'EOF' > source/hxdiscord_rpc/Discord.hx
           package hxdiscord_rpc;
