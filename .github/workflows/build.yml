@@ -122,13 +122,18 @@ jobs:
           }
           EOF
 
-          # Inject standard remapping properties safely directly inside Project.xml instead of using an external HXML flag block
-          sed -i '/<\/project>/i \ <haxedef name="sys.thread.FixedThreadPool" value="Dynamic" \/>' Project.xml
-          sed -i '/<\/project>/i \ <haxedef name="sys.thread.Thread" value="Dynamic" \/>' Project.xml
-          sed -i '/<\/project>/i \ <haxedef name="sys.thread.Mutex" value="Dynamic" \/>' Project.xml
-          sed -i '/<\/project>/i \ <haxedef name="no_threads" \/>' Project.xml
+          # Instead of redefining the type as a value define, we force a compiler macro to override the types globally 
+          sed -i '/<\/project>/i \ <haxeflag name="--macro" value="compiler.addGlobalMetadata('\''sys.thread'\'', '\''@:native(\"Object\")'\'')" \/>' Project.xml
+          sed -i '/<\/project>/i \ <haxeflag name="-D" value="no_threads" \/>' Project.xml
 
-          find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
+          # Safely comment out the explicit sys.thread imports in LoadingState to prevent the target crash
+          if [ -f "source/states/LoadingState.hx" ]; then
+            sed -i 's/import sys\.thread\.FixedThreadPool;/\/\/ import sys.thread.FixedThreadPool;/g' source/states/LoadingState.hx
+            sed -i 's/import sys\.thread\.Thread;/\/\/ import sys.thread.Thread;/g' source/states/LoadingState.hx
+            sed -i 's/var thread:.*/var thread:Dynamic = null;/g' source/states/LoadingState.hx
+          fi
+
+          find . -name "FlxSoundTray.hx" -
 
       - name: Optimization & Web Compile Build
         run: |
