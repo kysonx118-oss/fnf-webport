@@ -87,8 +87,12 @@ jobs:
           echo 'class File { public static function getContent(path:String) return ""; public static function getBytes(path:String) return null; public static function saveContent(path:String, c:String) return; public static function saveBytes(path:String, b:Dynamic) return; public static function copy(s:String, d:String) {} }' > source/File.hx
           echo 'class Sys { public static function exit(code:Int) {} public static function sleep(t:Float) {} public static function command(c:String, ?a:Array<String>) return 0; public static function args():Array<String> return []; public static function getCwd() return ""; public static function setCwd(s:String) {} public static function print(v:Dynamic) {} public static function println(v:Dynamic) {} public static function environment() return new haxe.ds.StringMap<String>(); public static function getEnv(s:String) return ""; public static function programPath() return ""; }' > source/Sys.hx
           echo 'class Process { public var stdout:Dynamic; public var stderr:Dynamic; public function new(c:String, ?a:Dynamic) { stdout = { readAll: function() return { toString: function() return "" }, readLine: function() return "" }; stderr = stdout; } public function exitCode(b:Bool=true) return 0; public function close() {} }' > source/Process.hx
-          echo 'class Thread { public static function create(f:Void->Void) { f(); } public static function readMessage(b:Bool) return null; public static function sendMessage(m:Dynamic) {} }' > source/Thread.hx
-          echo 'class Mutex { public function new() {} public function acquire() {} public function release() {} }' > source/Mutex.hx
+          
+          # Create a fake sys.thread structure to completely neutralize FixedThreadPool crashes on HTML5
+          mkdir -p source/sys/thread
+          echo 'package sys.thread; class Thread { public static function create(f:Void->Void) { f(); } public static function readMessage(b:Bool) return null; public static function sendMessage(m:Dynamic) {} }' > source/sys/thread/Thread.hx
+          echo 'package sys.thread; class Mutex { public function new() {} public function acquire() {} public function release() {} }' > source/sys/thread/Mutex.hx
+          echo 'package sys.thread; class FixedThreadPool { public function new(threads:Int) {} public function run(f:Void->Void) { f(); } public function shutdown() {} }' > source/sys/thread/FixedThreadPool.hx
           
           # Force remove all desktop-only native libraries from the configuration file
           sed -i -e '/discord_rpc/d' -e '/discord-rpc/d' -e '/linc_luajit/d' -e '/hxVideoEngine/d' -e '/extension-webkit/d' Project.xml || true
@@ -100,14 +104,12 @@ jobs:
           find source -name "*.hx" -type f -exec sed -i -e 's/sys\.FileSystem/FileSystem/g' \
                                                            -e 's/sys\.io\.File/File/g' \
                                                            -e 's/sys\.io\.Process/Process/g' \
-                                                           -e 's/sys\.thread\.Thread/Thread/g' \
-                                                           -e 's/sys\.thread\.Mutex/Mutex/g' \
                                                            -e '/import cpp/d' \
                                                            -e 's/cpp\.[a-zA-Z0-9_]+/Dynamic/g' \
                                                            -e '/import llua/d' \
                                                            -e 's/llua\.[a-zA-Z0-9_]+/Dynamic/g' {} +
           find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
-
+      
       - name: Optimization & Web Compile Build
         run: |
           cd engine-source
