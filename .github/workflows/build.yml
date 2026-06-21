@@ -86,10 +86,6 @@ jobs:
           echo 'class Sys { public static function exit(code:Int) {} public static function sleep(t:Float) {} public static function command(c:String, ?a:Array<String>) return 0; public static function args():Array<String> return []; public static function getCwd() return ""; public static function setCwd(s:String) {} public static function print(v:Dynamic) {} public static function println(v:Dynamic) {} public static function environment() return new haxe.ds.StringMap<String>(); public static function getEnv(s:String) return ""; public static function programPath() return ""; }' > source/Sys.hx
           echo 'class Process { public var stdout:Dynamic; public var stderr:Dynamic; public function new(c:String, ?a:Dynamic) { stdout = { readAll: function() return { toString: function() return "" }, readLine: function() return "" }; stderr = stdout; } public function exitCode(b:Bool=true) return 0; public function close() {} }' > source/Process.hx
           
-          # Create fake standalone stubs instead of placing them inside a "sys" folder
-          echo 'class FixedThreadPool { public function new(threads:Int) {} public function run(f:Void->Void) { f(); } public function shutdown() {} }' > source/FixedThreadPool.hx
-          echo 'class Thread { public static function create(f:Void->Void) { f(); } public static function readMessage(b:Bool) return null; public static function sendMessage(m:Dynamic) {} }' > source/Thread.hx
-
           # Force remove all desktop-only native libraries from the configuration file
           sed -i -e '/discord_rpc/d' -e '/discord-rpc/d' -e '/linc_luajit/d' -e '/hxVideoEngine/d' -e '/extension-webkit/d' Project.xml || true
           
@@ -125,49 +121,17 @@ jobs:
               public static function ClearPresence(){}
           }
           EOF
+
+          # Instead of string-replacing code, we instruct Haxe directly to map missing types to Dynamic
+          echo "--remap sys.thread.FixedThreadPool:Dynamic" > extraParams.hxml
+          echo "--remap sys.thread.Thread:Dynamic" >> extraParams.hxml
+          echo "--remap sys.thread.Mutex:Dynamic" >> extraParams.hxml
+          echo "-D no_threads" >> extraParams.hxml
           
-          # Brutally rewrite any reference or import containing "sys." across the codebase
-          find source -name "*.hx" -type f -exec sed -i -e 's/sys\.FileSystem/FileSystem/g' \
-                                                           -e 's/sys\.io\.File/File/g' \
-                                                           -e 's/sys\.io\.Process/Process/g' \
-                                                           -e 's/sys\.thread\.FixedThreadPool/FixedThreadPool/g' \
-                                                           -e 's/sys\.thread\.Thread/Thread/g' \
-                                                           -e 's/sys\.thread\.Mutex/Dynamic/g' \
-                                                           -e 's/import sys\.thread\./\/\/ /g' \
-                                                           -e 's/import sys\./\/\/ /g' {} +
+          # Append our clean hxml flags into Project.xml safely
+          sed -i '/<\/project>/i \ <haxeflag name="-hxml" value="extraParams.hxml" \/>' Project.xml
 
           find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
-
-      - name: Optimization & Web Compile Build
-        run: |
-          cd engine-source
-          set -e
-          haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL -D no_threads -D hscriptPos
-
-      - name: Package Flat ZIP & Standardize output
-        run: |
-          # Dynamically locate the html5 bin folder wherever it was generated
-          BIN_PATH=$(find engine-source/export -type d -name "bin" | grep "html5" | head -n 1)
-          if [ -z "$BIN_PATH" ]; then
-            echo "Error: Could not find the HTML5 export bin directory!"
-            exit 1
-          fi
-          cd "$BIN_PATH"
-          
-          # Rename main engine JS file to funkin.js for easier jsDelivr/CDN embedding
-          MAIN_JS=$(ls *.js | grep -E -v 'howler|pako' | head -n 1)
-          if [ -n "$MAIN_JS" ] && [ "$MAIN_JS" != "funkin.js" ]; then
-            mv "$MAIN_JS" funkin.js
-            if [ -f "index.html" ]; then
-              sed -i "s/$MAIN_JS/funkin.js/g" index.html
-            fi
-          fi
-          
-          if [ ! -f "index.html" ]; then
-            echo "<!DOCTYPE html><html><body><h1>FNF Web Build</h1><script src='funkin.js'></script></body></html>" > index.html
-          fi
-          
-          zip -r "$GITHUB_WORKSPACE/web_export.zip" *
 
       - name: Upload Web Export
         uses: actions/upload-artifact@v4
