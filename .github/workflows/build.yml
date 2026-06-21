@@ -76,10 +76,8 @@ jobs:
           
           # Run the installer
           haxelib run hmm install --quiet
-          
-          # Direct backup safety install for flxanimate just in case
           haxelib install flxanimate 3.0.4 --quiet
-      
+
       - name: Patch HTML5 incompatible code (Mock Sys)
         run: |
           cd engine-source
@@ -88,6 +86,12 @@ jobs:
           echo 'class Sys { public static function exit(code:Int) {} public static function sleep(t:Float) {} public static function command(c:String, ?a:Array<String>) return 0; public static function args():Array<String> return []; public static function getCwd() return ""; public static function setCwd(s:String) {} public static function print(v:Dynamic) {} public static function println(v:Dynamic) {} public static function environment() return new haxe.ds.StringMap<String>(); public static function getEnv(s:String) return ""; public static function programPath() return ""; }' > source/Sys.hx
           echo 'class Process { public var stdout:Dynamic; public var stderr:Dynamic; public function new(c:String, ?a:Dynamic) { stdout = { readAll: function() return { toString: function() return "" }, readLine: function() return "" }; stderr = stdout; } public function exitCode(b:Bool=true) return 0; public function close() {} }' > source/Process.hx
           
+          # Build custom mock web stubs for threading components to bypass the strict JS-target block
+          mkdir -p source/sys/thread
+          echo 'package sys.thread; class Thread { public static function create(f:Void->Void) { f(); } public static function readMessage(b:Bool) return null; public static function sendMessage(m:Dynamic) {} }' > source/sys/thread/Thread.hx
+          echo 'package sys.thread; class Mutex { public function new() {} public function acquire() {} public function release() {} }' > source/sys/thread/Mutex.hx
+          echo 'package sys.thread; class FixedThreadPool { public function new(threads:Int) {} public function run(f:Void->Void) { f(); } public function shutdown() {} }' > source/sys/thread/FixedThreadPool.hx
+
           # Force remove all desktop-only native libraries from the configuration file
           sed -i -e '/discord_rpc/d' -e '/discord-rpc/d' -e '/linc_luajit/d' -e '/hxVideoEngine/d' -e '/extension-webkit/d' Project.xml || true
           
@@ -104,7 +108,7 @@ jobs:
           }
           EOF
 
-          # Create a bulletproof fake hxdiscord_rpc stub module just in case other files use it
+          # Create a fake hxdiscord_rpc stub module just in case other library targets invoke it
           mkdir -p source/hxdiscord_rpc
           cat << 'EOF' > source/hxdiscord_rpc/Discord.hx
           package hxdiscord_rpc;
@@ -124,25 +128,59 @@ jobs:
           }
           EOF
           
-          # Clean up source files targeting sys systems safely without destroying UI layout variables
+          # Clean up native platform markers gracefully
           find source -name "*.hx" -type f -exec sed -i -e 's/sys\.FileSystem/FileSystem/g' \
                                                            -e 's/sys\.io\.File/File/g' \
-                                                           -e 's/sys\.io\.Process/Process/g' \
-                                                           -e 's/import sys\.thread\./\/\/ /g' \
-                                                           -e 's/sys\.thread\.FixedThreadPool/Dynamic/g' \
-                                                           -e 's/sys\.thread\.Thread/Dynamic/g' \
-                                                           -e 's/sys\.thread\.Mutex/Dynamic/g' {} +
-                                                           
-          # Safely comment out remaining desktop specific blocks in LoadingState
-          if [ -f "source/states/LoadingState.hx" ]; then
-            sed -i 's/var thread:.*/var thread:Dynamic = null;/g' source/states/LoadingState.hx
-          fi
+                                                           -e 's/sys\.io\.Process/Process/g' {} +
 
           find . -name "FlxSoundTray.hx" -type f -exec sed -i 's/public function new(/public function showIncrement() { show(); } public function showDecrement() { show(); }\n\n&/g' {} +
-      
+
       - name: Optimization & Web Compile Build
         run: |
           cd engine-source
           set -e
-          # Removed the reserved target.html5 flag
           haxelib run lime build html5 -release -D DISCORD_DISABLE -D NO_PRELOAD_ALL -D no_threads -D hscriptPos
+
+      - name: Package Flat ZIP & Standardize output
+        run: |
+          # Dynamically locate the html5 bin folder wherever it was generated
+          BIN_PATH=$(find engine-source/export -type d -name "bin" | grep "html5" | head -n 1)
+          if [ -z "$BIN_PATH" ]; then
+            echo "Error: Could not find the HTML5 export bin directory!"
+            exit 1
+          fi
+          cd "$BIN_PATH"
+          
+          # Rename main engine JS file to funkin.js for easier jsDelivr/CDN embedding
+          MAIN_JS=$(ls *.js | grep -E -v 'howler|pako' | head -n 1)
+          if [ -n "$MAIN_JS" ] && [ "$MAIN_JS" != "funkin.js" ]; then
+            mv "$MAIN_JS" funkin.js
+            if [ -f "index.html" ]; then
+              sed -i "s/$MAIN_JS/funkin.js/g" index.html
+            fi
+          fi
+          
+          if [ ! -f "index.html" ]; then
+            echo "<!DOCTYPE html><html><body><h1>FNF Web Build</h1><script src='funkin.js'></script></body></html>" > index.html
+          fi
+          
+          zip -r "$GITHUB_WORKSPACE/web_export.zip" *
+
+      - name: Upload Web Export
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-export
+          path: web_export.zip
+
+      - name: Auto-Publish to GitHub Branch
+        run: |
+          BIN_PATH=$(find engine-source/export -type d -name "bin" | grep "html5" | head -n 1)
+          cd "$BIN_PATH"
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy FNF Web Port Build"
+          git branch -M gh-pages
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push -u origin gh-pages --force
